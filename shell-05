@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read USERNAME
+read PASSWORD
+echo "$USERNAME AND $PASSWORD"
