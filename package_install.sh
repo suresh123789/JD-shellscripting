@@ -6,7 +6,7 @@ then
     echo "you are super user"
 else
     echo "you must be super user to execute"
-    exit1
+    exit 1
 fi
 
 dnf install mysql -y
@@ -16,5 +16,5 @@ then
     echo "installation success"
 else
     echo "installation FAILURE"
-    exit1
+    exit 1
 fi
