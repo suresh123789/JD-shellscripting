@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo su -
-dnf intall mysql -y
+# sudo su -
+dnf install mysql -y
 $?
