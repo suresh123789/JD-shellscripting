@@ -1,5 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d '.' -f1 )
+LOGFILE=$(/tmp/$TIMESTAMP-$SCRIPTNAME.log)
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -18,8 +21,8 @@ else
     exit 1
 fi
 
-dnf install mysqll -y
+dnf install mysql -y &>> LOGFILE
 VALIDATE $? "mysql installation"
 
-dnf install git -y
+dnf install git -y &>> LOGFILE
 VALIDATE $? "git installation"
