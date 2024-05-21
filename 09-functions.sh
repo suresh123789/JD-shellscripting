@@ -22,5 +22,5 @@ dnf install mysql -y
 VALIDATE $? "mysql installation"
 
 
-dnf install git -y
+dnf install ansible -y
 VALIDATE $? "git installation"
