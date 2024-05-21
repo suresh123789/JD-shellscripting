@@ -29,10 +29,10 @@ fi
 
 for i in $@
 do
-    dnf list installed $i
+    dnf list installed $i &>> $LOGFILE
     if [ $? -ne 0 ]
     then
-        dnf install $i -y &>>$LOGFILE
+        dnf install $i -y &>> $LOGFILE
         VALIDATE $? "$i installation"
     else
         echo -e "$i already installed .... $Y SKIPPING $N"
