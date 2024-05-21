@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-dnf install mysqll -y
+dnf install mysql -y
 VALIDATE $? "mysql installation"
 
 dnf install git -y
