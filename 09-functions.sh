@@ -5,7 +5,7 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo "$2 FAILED"
-        exit 1
+        #exit 1
     else
         echo "$2 SUCCESS"
     fi
@@ -18,7 +18,7 @@ else
     exit 1
 fi
 
-dnf install mysql -y
+dnf install mysqll -y
 VALIDATE $? "mysql installation"
 
 dnf install git -y
