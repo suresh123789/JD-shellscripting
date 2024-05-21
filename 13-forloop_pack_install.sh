@@ -9,7 +9,7 @@ VALIDATE(){
     then
         echo -e "$2 .....$R FAILED $N"
     else
-        echo -e "$2 .....$G SUCESS $N"
+        echo -e "$2 .....$G SUCCESS $N"
     fi
 }
 
@@ -29,7 +29,7 @@ fi
 
 for i in $@
 do
-    dnf installed list $i
+    dnf list installed $i
     if [ $? -ne 0 ]
     then
         dnf install $i -y &>>$LOGFILE
