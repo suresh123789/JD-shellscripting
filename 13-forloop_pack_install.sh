@@ -35,6 +35,6 @@ do
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "$i installation"
     else
-        echo "$i already installed .... $G SKIPPING $N"
+        echo -e "$i already installed .... $Y SKIPPING $N"
     fi
 done
