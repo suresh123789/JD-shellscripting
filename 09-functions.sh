@@ -23,4 +23,4 @@ VALIDATE $? "mysql installation"
 
 
 dnf install git -y
-VALIDATE $? "mysql installation"
+VALIDATE $? "git installation"
