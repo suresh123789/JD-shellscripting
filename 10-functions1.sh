@@ -21,8 +21,8 @@ else
     exit 1
 fi
 
-dnf install mysql -y &>> LOGFILE
+dnf install mysql -y &>>LOGFILE
 VALIDATE $? "mysql installation"
 
-dnf install git -y &>> LOGFILE
+dnf install git -y &>>LOGFILE
 VALIDATE $? "git installation"
